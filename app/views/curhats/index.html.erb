@@ -1,3 +1,7 @@
+
+ <div class="new_curhat">
+   <%= render partial: "curhats/form", locals: { curhat: Curhat.new} %>
+  
 <p style="color: green"><%= notice %></p>
 
 <h1>Curhats</h1>
@@ -12,3 +16,4 @@
 </div>
 
 <%= link_to "New curhat", new_curhat_path %>
+ </div> 
