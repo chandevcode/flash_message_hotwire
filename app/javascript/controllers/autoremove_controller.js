@@ -6,7 +6,7 @@ export default class extends Controller {
     setTimeout(() => {
       this.dismiss()
 
-    }, 2000)
+    }, 3000)
   }
 
   dismiss() {

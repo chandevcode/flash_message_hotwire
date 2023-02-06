@@ -23,7 +23,7 @@ class CurhatsController < ApplicationController
 
     respond_to do |format|
       if @curhat.save
-        flash.now[:notice] = 'Curhat was created !'
+        flash.now[:notice] = 'Curhat was created!'
         format.turbo_stream do
           render turbo_stream: [
             turbo_stream.update('new_curhat', partial: 'curhats/form', locals: { curhat: Curhat.new }),
@@ -34,12 +34,11 @@ class CurhatsController < ApplicationController
         format.html { redirect_to curhat_url(@curhat), notice: 'Curhat was successfully created.' }
         format.json { render :show, status: :created, location: @curhat }
       else
+        flash.now[:alert] = "Curhat can't blank"
         format.turbo_stream do
           render turbo_stream:
             turbo_stream.update('new_curhat', partial: 'curhats/form', locals: { curhat: @curhat })
         end
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @curhat.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -1,19 +1,15 @@
 
- <div class="new_curhat">
-   <%= render partial: "curhats/form", locals: { curhat: Curhat.new} %>
-  
-<p style="color: green"><%= notice %></p>
+<div id="new_curhat">
+  <%= render partial: "curhats/form", locals: {curhat: Curhat.new} %>
+</div> 
 
-<h1>Curhats</h1>
+  <h1>Curhats</h1>
 
-<div id="curhats">
-  <% @curhats.each do |curhat| %>
-    <%= render curhat %>
-    <p>
+  <div id="curhats">
+    <% @curhats.each do |curhat| %>
+      <%= render curhat %>
+      <p>
       <%= link_to "Show this curhat", curhat %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New curhat", new_curhat_path %>
- </div> 
+      </p>
+    <% end %>
+  </div>

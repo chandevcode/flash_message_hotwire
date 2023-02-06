@@ -1,3 +1,10 @@
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, id: key %>
-<% end %>
+<div data-controller="autoremove">
+  <% flash.each do |key, value| %>
+
+    <div class="btn btn-success">
+      <%= content_tag :div, value, id: key %>
+
+    </div>
+  <% end %>
+</div>
+
