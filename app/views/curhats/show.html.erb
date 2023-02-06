@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @curhat %>
+
+<div>
+  <%= link_to "Edit this curhat", edit_curhat_path(@curhat) %> |
+  <%= link_to "Back to curhats", curhats_path %>
+
+  <%= button_to "Destroy this curhat", @curhat, method: :delete %>
+</div>

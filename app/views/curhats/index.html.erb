@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Curhats</h1>
+
+<div id="curhats">
+  <% @curhats.each do |curhat| %>
+    <%= render curhat %>
+    <p>
+      <%= link_to "Show this curhat", curhat %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New curhat", new_curhat_path %>
